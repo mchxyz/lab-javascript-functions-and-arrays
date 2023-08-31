@@ -28,31 +28,31 @@ for (let i = 1; i < words.length; i++) {
 if (words[i].length > longestOcurrence) {
   longestWord = words[i];
   longestOcurrence = words[i].length;
-
 }  
 }
 return longestWord; 
 }
 
 
-// Find the longest word
-// should declare a function named findLongestWord 
-// should return null when called with an empty array 
-// should return the word when called with a single-word array
-// should return the first occurrence of the word when longest have multiple occurrences
-// should return the longest occurrence when it has multiple words
-
-
-
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arr) {
+  let suma = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    suma += arr[i]
+  }
+
+  return suma;
+}
+
+// sumNumbers();
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+// function sum() {}
 
 
 
@@ -60,16 +60,35 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arr2) {
+
+  if (arr2.length === 0) {
+    return null
+  }
+
+  return sumNumbers(arr2) / arr2.length;
+}
 
 
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+// const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arr3) {
+  if (arr3.length === 0) {
+    return null;
+  }
+
+  let sumofWords = 0;
+
+  arr3.forEach((word) => {
+    sumofWords += word.length;
+  })
+
+  return sumofWords / arr3.length;
+}
 
 // Bonus - Iteration #4.1
-function avg() {}
+// function avg() {}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
